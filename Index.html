@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Restaurant Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  
+  <style>
+      .jumbotron{
+          min-height: 300px;
+          margin-bottom: 0;
+      }
+      .imglogo{
+          height: 40px;
+      }
+      .navbar{
+          background: black;
+      }
+      .navbar-nav > li.nav-item > a:hover{
+        background: red;
+      }
+      .dropdown:hover .dropdown-menu{
+        display: block;
+        
+    }
+    .dropdown:hover .dropdown-menu > a:hover{
+        background-color: rgb(223, 207, 207);
+        
+    }
+    .carousel-item > .item {
+        opacity: 0.6;
+    }
+    .card-img{
+        opacity: 0.6;
+    }
+   
+      .carousel-caption > .Image1-cap {
+        color: rgb(226, 13, 49);
+        height: 25px;
+        font-size: 25px;
+    }
+    
+    .carousel-caption > .Image3-cap, .Image3-p {
+        color: aqua;
+        height: 25px;
+        font-size: 25px;
+    }
+       
+    .carousel-control-prev, .carousel-control-next{
+      top: 2%;
+    }
+    
+        #inputemail2 {
+            width: 400px;
+        }
+        .embed-responsive .card-img-first {
+        object-fit: cover;
+        }
+        .card {
+            border: none;
+        }
+        .modal-header {
+        background-color: #24a0ed;
+        color: white;
+        }
+        .modal-body {
+            color: grey;
+            text-align: left;
+        }
+
+
+        @media only screen and (max-width: 954px) {
+    .jumbotron{
+        background-size: 100% 100%;
+    } 
+    
+    #searchform {
+        display: none
+    }
+    .nav .btn {
+        float: left;
+        
+    }
+    .imglogo {
+        display: none;
+    }
+}
+        </style>
+</head>
+
+<body>
+    <!-- Top Image -->
+    <div class="jumbotron" style="background: url('intlfood.jpg') no-repeat center fixed; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;">
+    </div>
+    
+   
+    <!-- Nav & Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+            <img src="logo.jfif" class="imglogo rounded pr-2" alt="chef">
+            <a id="navBrand" class="navbar-brand" href="#">Lucky Garden</a>   
+            <button id="navBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarSm">
+                <span class="navbar-toggler-icon"></span>
+            </button>    
+            <div class="navbar-collapse collapse" id="collapsingNavbarSm">  
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Menu</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item" data-toggle="tooltip" title="See ingredients" data-placement="top">Appetizers</a>
+                  
+                    <a href="#" class="dropdown-item" data-toggle="tooltip" title="See ingredients" data-placement="top">Chop Suey</a>
+                    <a href="#" class="dropdown-item" data-toggle="tooltip" title="See ingredients" data-placement="top">Rice</a>
+                    <a href="#" class="dropdown-item" data-toggle="tooltip" title="See ingredients" data-placement="top">Noodles</a>
+                    <a href="#" class="dropdown-item" data-toggle="tooltip" title="See ingredients" data-placement="top">Curry</a>
+                </div>
+                
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bite Club</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Order Takeout</a>
+                  </li>
+                </ul>
+            </div>  
+                <form class="form-inline ">
+                    <div class="input-group" id="searchform">                    
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-secondary"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>                
+                <ul class="nav navbar-nav ml-auto pl-1">
+                    <button class="btn btn-success" type="button">Log in</button>
+                </ul>
+                </nav>
+
+                             
+
+                <!-- Carousel -->
+          
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="item w-100" src="Image1_carousel.jpg" alt="First slide">
+                            <div id="fImgSty" class="carousel-caption d-none d-md-block">
+                                <h1 class="Image1-cap">Celebrate <strong>Valentine's Day</strong> with your beau...</h1>
+                                <h2 class="Image1-p">Unlimited Two Course meal for only $50</h2>
+                              </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="item w-100" src="Image3_Carousel.png" alt="Second slide">
+                            <div id="sImgSty" class="carousel-caption d-none d-md-block">
+                                <h1 class="Image2-cap">Come check out our ultimate Steam Boat</h1>
+                                <p class="Image2-p">Starting from only $30*</p>
+                              </div>
+                            </div>
+                        <div class="carousel-item">
+                            <img class="item w-100" src="Image2_carousel.jpg" alt="Third slide">
+                            <div id="tImgSty" class="carousel-caption d-none d-md-block">
+                                <h1 class="Image3-cap">Order from 50 varieties of Coctails</h1>
+                                <p class="Image3-p">Limited time deal*</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                
+                <div class="card overflow-hidden border-0 rounded-0 text-center">
+                        <img src="newsletter.jpg" class="card-img rounded-0" alt="noodle">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center text-white rgba-black-light">
+                            <h3 class="card-title text-uppercase"><strong>JOIN OUR NEWSLETTER AND BE THE FIRST TO KNOW ABOUT PROMOTIONS AND DEALS</strong></h3>
+                            <form class="form-inline justify-content-center">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="sr-only form-control">Enter your email</label>
+                                    <input type="email" class="form-control ml-auto" id="inputemail2" placeholder="Enter your email">
+                                    <button type="submit" class="btn btn-primary form-control ml-1">SUBSCRIBE</button>
+                                </div>
+                           </form>
+                        </div>
+                    </div>
+
+
+                <!-- Grid -->
+                
+                <div class="row mt-5 py-5 mx-5 px-5">
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <div class="embed-responsive embed-responsive-16by9">
+                          <img src="Card_img1.webp" class="card-img-first embed-responsive-item">
+                        </div>
+                          <p>Now is the time to order your New Year's Eve Dinner Package! An elegant 5 course offering with all of your ...</p>
+                          <p><a href="#" class="btn btn-light text-grey pl-0"><small>Read More </small><i class="fa fa-angle-double-right"></i></a>
+                          </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="Card_img2.webp" class="card-img-first embed-responsive-item">
+                        </div>
+                          <p>Our Valentine's Day Dinner for two is Available to Pre-Order! Order by Feb 10th.</p>
+                          <p><a href="#" class="btn btn-light text-grey pl-0"><small>Read More </small><i class="fa fa-angle-double-right"></i></a></p>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                    <img src="card_img3.jpg" class="card-img-first embed-responsive-item">
+                                </div>
+                                  <p>Our Gift Boxes have arrived this December! Order online and pick up from our curbside service</p>
+                                  <p><a href="#" class="btn btn-light text-grey pl-0"><small>Read More </small><i class="fa fa-angle-double-right"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-5 mb-5 pb-5 mt-2 px-5">
+                        <div class="col-sm-4">
+                          <div class="card">
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <img src="card_img4.webp" class="card-img-first embed-responsive-item">
+                            </div>
+                              <p>We are Open this Coming Thanksgiving Weekend! ⁠ ⁠ We are offering a Thanksgiving dinner to everyone.</p>
+                              <p><a href="#" class="btn btn-light text-grey pl-0"><small>Read More </small><i class="fa fa-angle-double-right"></i></a>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="card">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <img src="card_img5.jfif" class="card-img-first embed-responsive-item">
+                            </div>
+                              <p>Happy Thanksgiving to our Friends and Family. ⁠ ⁠ This year has been one of many challenges.</p>
+                              <p><a href="#" class="btn btn-light text-grey pl-0"><small>Read More </small><i class="fa fa-angle-double-right"></i></a></p>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                        <img src="card_img6.jpg" class="card-img-first embed-responsive-item">
+                                    </div>
+                                      <p>We travel well. 😊 Now offering Delivery and Takeout. ⁠</p>
+                                      <p><a href="#" class="btn btn-light text-grey pl-0"><small>Read More </small><i class="fa fa-angle-double-right"></i></a></p>
+                                </div>
+                            </div>
+                        </div>
+           
+
+                <!-- Footer -->
+                <footer id="footer" class="py-4 bg-dark text-white">
+                    <div class="container text-center">
+                      <p>Copyright &copy; Lucky Garden</p>
+                        <p class="btn btn-light text-grey" data-toggle="modal" data-target="#myModal">Contact us</p>
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h2 class="modal-title" id="myModalTitle">Write to us</h2>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                          </div>
+                                        </form>
+                      
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Send message</button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+    
+                  </footer>
+              
+
+        
+                <script>
+                    $( "div.carousel-caption > h2" ).css( "border-bottom", "3px solid white" );
+                    $( "div.carousel-caption > h1" ).css( "border-bottom", "3px solid white" );
+                    $('#exampleModal').on('show.bs.modal', function (event) {
+                     var button = $(event.relatedTarget);
+                    })
+
+                    document.getElementById("navBtn").addEventListener("click", function() {
+                        document.getElementById("navBrand").style.alignSelf = "flex-start";
+                    })
+
+                    $(document).ready(function(){
+                    $('[data-toggle="tooltip"]').tooltip();   
+                    });                 
+                                     
+                    </script>
+    
+
+
+</body>
+</html> 
